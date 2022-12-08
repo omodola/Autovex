@@ -1,0 +1,189 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.altered_menu{
+    right: 0;
+}
+
+.edit_time_button{
+    height: 45px;
+    padding-right: 26px !important;
+    padding-left: 25px !important;
+    font-size: 17px !important;
+    border-radius: 0 !important;
+    line-height: 0;
+}
+
+.clock {
+    color: #0b6dff;
+    font-size: 150px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+}
+
+.styled_button {
+    padding: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    border: none;
+    background-color: #0b6dff;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.styled_time_picker{
+    background: #EAEFF1;
+    border-bottom: 4px solid #C9D6DA;
+    padding: .45em .45em .45em .65em;
+    width: 80%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.styled_time_save_button{
+    background: #b3d1ff;
+    border-bottom: 4px solid #C9D6DA;
+    margin-bottom: .625em;
+    outline-offset: 3px;
+    padding: .45em .45em .45em .65em;
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.styled_text{
+    color: #a1aec4;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.styled_text_centered{
+    margin-left: 15% !important;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.collapse-div-caret{
+    cursor: pointer;
+    margin-left: 33%;
+    margin-bottom: 30px;
+}
+
+.time_edit_holder{
+    display: none;
+    line-height: 0
+}
+
+.edit_caret{
+    display: none;
+    line-height: 0;
+    margin-left: 28%;
+    border: 1px dashed gray;
+    width: 20%;
+    padding-left: 50px
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 60px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #0b6dff;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px){
+    .clock{
+        font-size: 110px;
+    }
+
+    .altered_menu{
+        right: 63px;
+    }
+
+    .edit_caret{
+        width: 30%;
+        margin-left: 25%;
+    }
+
+    .styled_time_picker{
+        margin-bottom: 5px;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .clock{
+        font-size: 50px;
+        left: 60%;
+    }
+
+    .altered_menu{
+        display: block;
+        right: 25px;
+    }
+
+    .collapse-div-caret{
+        margin-left: 24%;
+    }
+
+
+    .edit_caret{
+        width: 60%;
+        margin-left: 6%;
+    }
+
+    .styled_time_picker{
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+}
+
